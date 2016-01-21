@@ -28,4 +28,17 @@ public class Calculadora
             System.out.println(multiplo5);
         }
     }
+    /**
+     * Método que saca por pantalla la suma de los números entre 0 y 10 ambos incluidos.
+     */
+    public void sumValues()
+    {
+        int suma = 0;
+        int contador = 0;
+        while (contador < 10){
+            contador++;
+            suma = suma + contador;
+        }
+        System.out.println(suma);
+    }
 }
