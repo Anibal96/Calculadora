@@ -6,13 +6,12 @@
  */
 public class Calculadora
 {
-
+    
     /**
      * Constructor for objects of class Calculadora
      */
     public Calculadora()
     {
-        
     }
 
     /**
@@ -48,7 +47,7 @@ public class Calculadora
     {
         int suma;
         if (a<0 || b<0){
-            System.out.println("Error añadido valor 0 o negativo (Tienen que ser mayor de 0)");
+            System.out.println("Error añadido valor negativo (Tienen que ser mayor o igual a 0)");
             suma = -1;
         }
         else{
@@ -72,14 +71,20 @@ public class Calculadora
      */
     public boolean isPrime(int n)
     {
-        boolean esPrimo = true;
-        int num = n;
-        while (2 <= (num - 1)){
-            num = num - 1;
-            int mod = (n % num);
-            if (mod == 0){
-                esPrimo = false;
-            }
+         boolean esPrimo = true;
+         if(n>1){
+             int num = n;
+             while (2 <= (num - 1)){
+                 num = num - 1;
+                 int mod = (n % num);
+                 if (mod == 0){
+                     esPrimo = false;
+                    }
+                }
+        }
+        else{
+            esPrimo = false;
+            System.out.println("Error el número tiene que ser mayor de 1");
         }
         return esPrimo;
     }
