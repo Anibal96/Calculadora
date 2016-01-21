@@ -6,8 +6,6 @@
  */
 public class Calculadora
 {
-    //Atributo que almacena el multipo de 5 a imprimir
-    private int multiplo5;
 
     /**
      * Constructor for objects of class Calculadora
@@ -22,7 +20,7 @@ public class Calculadora
      */
     public void multiplesOfFive()
     {
-        multiplo5 = 10;
+        int multiplo5 = 10;
         while (multiplo5 < 90){
             multiplo5 = multiplo5 + 5;
             System.out.println(multiplo5);
@@ -48,16 +46,41 @@ public class Calculadora
      */
     public int sumValuesInterval (int a, int b)
     {
-        if (a > b){
-            int c = a;
-            a = b;
-            b = c;
+        int suma;
+        if (a<0 || b<0){
+            System.out.println("Error añadido valor 0 o negativo (Tienen que ser mayor de 0)");
+            suma = -1;
         }
-        int suma = a;
-        while (a < b){
-            a++;
-            suma = suma + a;
+        else{
+            if (a > b){
+                int c = a;
+                a = b;
+                b = c;
             }
+            suma = a;
+            while (a < b){
+                a++;
+                suma = suma + a;
+            }
+        }
         return suma;
+    }
+    
+    /**
+     * Método que pide un número y devuelve verdadero si el parámetro n es primo o falso en caso contrario
+     * 
+     */
+    public boolean isPrime(int n)
+    {
+        boolean esPrimo = true;
+        int num = n;
+        while (2 <= (num - 1)){
+            num = num - 1;
+            int mod = (n % num);
+            if (mod == 0){
+                esPrimo = false;
+            }
+        }
+        return esPrimo;
     }
 }
