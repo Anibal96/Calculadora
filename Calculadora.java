@@ -28,6 +28,7 @@ public class Calculadora
             System.out.println(multiplo5);
         }
     }
+    
     /**
      * Método que saca por pantalla la suma de los números entre 0 y 10 ambos incluidos.
      */
@@ -40,5 +41,23 @@ public class Calculadora
             suma = suma + contador;
         }
         System.out.println(suma);
+    }
+    
+    /**
+     * Método que muestra la suma de los valores entre los dados en la cabecera.
+     */
+    public int sumValuesInterval (int a, int b)
+    {
+        if (a > b){
+            int c = a;
+            a = b;
+            b = c;
+        }
+        int suma = a;
+        while (a < b){
+            a++;
+            suma = suma + a;
+            }
+        return suma;
     }
 }
