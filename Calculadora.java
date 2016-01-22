@@ -88,4 +88,24 @@ public class Calculadora
         }
         return esPrimo;
     }
-}
+    
+    /**
+     * Método que multiplica 2 números dados.
+     */
+    public int multiplicacion (int a, int b)
+    {
+        int mult = -1;
+        if (a < 0 || b < 0){
+            System.out.println("Error el número tiene que ser mayor de 0");
+        }
+        else{
+            int cont = 1;
+            mult = 0;
+            while (cont <= b){
+                mult = mult + a ;
+                cont++;
+            }
+        }
+        return mult;
+    }
+ }
