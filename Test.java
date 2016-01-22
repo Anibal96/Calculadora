@@ -21,7 +21,7 @@ public class Test
             metodoCorrecto = false;
         }
         if (calculadora.isPrime(4)){
-            System.out.println("Comprobando isPrime(4)... resultado correcto true / resultado metodo " + calculadora.isPrime(4) + " ... ERROR");
+            System.out.println("Comprobando isPrime(4)... resultado correcto false / resultado metodo " + calculadora.isPrime(4) + " ... ERROR");
             metodoCorrecto = false;
         }
         else{
@@ -35,7 +35,7 @@ public class Test
             metodoCorrecto = false;
         }
         if (calculadora.isPrime(10)){
-            System.out.println("Comprobando isPrime(10)... resultado correcto true / resultado metodo " + calculadora.isPrime(10) + " ... ERROR");
+            System.out.println("Comprobando isPrime(10)... resultado correcto false / resultado metodo " + calculadora.isPrime(10) + " ... ERROR");
             metodoCorrecto = false;
         }
         else{
